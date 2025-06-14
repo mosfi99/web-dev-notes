@@ -13,3 +13,8 @@
 ## Color Contrast
 
 - [Check the color contrast for text and background](https://coolors.co/contrast-checker/112a46-acc8e5)
+
+## Responsiveness
+
+- Use % for widths (parents and children).
+- Avoid heights.
