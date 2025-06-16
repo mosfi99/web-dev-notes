@@ -6,8 +6,6 @@
 
 ![Semantic HTML from The Odin Project](images/semantic_html_example.png)
 
----
-
 ## Accessibility
 
 ### Auditing
