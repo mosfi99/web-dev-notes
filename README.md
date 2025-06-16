@@ -18,13 +18,25 @@
 
 ## Responsiveness
 
-## Avoid fixed width and height
+### Avoid fixed width and height
 
-- Use % for widths (parents and children).
-- Set a `max-width` (or `min-width`).
-- Avoid heights or use or `min-height` (or `max-height`).
+Instead use a dynamic + fixed system:
 
-### Units
+```css
+div {
+	width: 80%;
+	max-width: 750px;
+}
+```
+
+- dynamic
+  - Use % for widths (parents and children).
+  - Mostly avoid heights
+- fixed
+  - `max-width` (or `min-width`).
+  - `min-height` (or `max-height`).
+
+## Units
 
 - Use `rem` for text, margins, and padding.
 - Use `em` for button padding so it scales relative to the button’s font size.
