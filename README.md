@@ -36,16 +36,16 @@ div {
   - `max-width` (or `min-width`).
   - `min-height` (or `max-height`).
 
-## Units
+### Units
 
 - Use `rem` for text, margins, and padding.
 - Use `em` for button padding so it scales relative to the button’s font size.
 
-## Flex
+### Flex
 
 - `flex-wrap`
 
-## Grid
+### Grid
 
 - `minmax`
 - `auto-fill`
