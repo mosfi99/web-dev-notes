@@ -1,0 +1,109 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		interpolate-size: allow-keywords;
+	}
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	/* width: auto; */
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+/* end of Josh's reset */
+
+/* My CSS */
+:root {
+	font-size: 16px;
+
+	/* font size */
+	--f-xs: 0.85rem;
+	--f-s: 1rem;
+	--f-m: 1.25rem;
+	--f-l: 1.5rem;
+	--f-xl: 2rem;
+
+	/* spacing rem*/
+	--rem-xs: 0.25rem;
+	--rem-s: 0.5rem;
+	--rem-m: 1rem;
+	--rem-l: 2rem;
+	--rem-xl: 3rem;
+
+	/* spacing em */
+	--em-s: 0.5em;
+	--em-m: 1em;
+	--em-l: 1.5em;
+	--em-xl: 2em;
+
+	/* colors  */
+	--bg-clr: ;
+	--text-clr-light: ;
+	--text-clr-dark: ;
+
+	--clr-dark: ;
+	--clr-light: ;
+
+	/* other colors */
+
+	--shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+}
+
+/* utilities */
+.container {
+	width: 80%;
+	max-width: 750px;
+	margin: 0 auto;
+}
