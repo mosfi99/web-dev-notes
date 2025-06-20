@@ -69,20 +69,30 @@ h6 {
 	font-size: 16px;
 
 	/* font size */
-	--f-xs: 0.85rem;
-	--f-s: 1rem;
-	--f-m: 1.25rem;
-	--f-l: 1.5rem;
-	--f-xl: 2rem;
+	--f-xs: 0.75rem; /* 12px */
+	--f-s: 0.875rem; /* 14px */
+	--f-base: 1rem; /* 16px */
+	--f-m: 1.125rem; /* 18px */
+	--f-l: 1.25rem; /* 20px */
+	--f-xl: 1.5rem; /* 24px */
+	--f-2xl: 2rem; /* 32px */
+	--f-3xl: 2.5rem; /* 40px */
 
-	/* spacing rem*/
-	--rem-xs: 0.25rem;
-	--rem-s: 0.5rem;
-	--rem-m: 1rem;
-	--rem-l: 2rem;
-	--rem-xl: 3rem;
+	/* line height */
+	--lh-tight: 1.2;
+	--lh-relaxed: 1.75;
 
-	/* spacing em */
+	/* spacing rem */
+	--rem-xs: 0.25rem; /* 4px */
+	--rem-s: 0.5rem; /* 8px */
+	--rem-m: 1rem; /* 16px */
+	--rem-l: 1.5rem; /* 24px */
+	--rem-xl: 2rem; /* 32px */
+	--rem-2xl: 3rem; /* 48px */
+	--rem-3xl: 4rem; /* 64px */
+
+	/* contextual spacing */
+	--em-xs: 0.25em;
 	--em-s: 0.5em;
 	--em-m: 1em;
 	--em-l: 1.5em;
@@ -90,15 +100,19 @@ h6 {
 
 	/* colors  */
 	--bg-clr: ;
+	--accent-clr: ;
+
 	--text-clr-light: ;
 	--text-clr-dark: ;
 
-	--clr-dark: ;
-	--clr-light: ;
+	/* UI validation */
+	--success-clr: ;
+	--warning-clr: ;
+	--error-clr: ;
 
-	/* other colors */
-
-	--shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
+	/* shadows */
+	--shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+	--shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 }
 
 /* utilities */
