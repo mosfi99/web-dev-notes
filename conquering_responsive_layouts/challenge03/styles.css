@@ -87,13 +87,16 @@ h6 {
 	--em-m: 1em;
 	--em-l: 1.5em;
 	--em-xl: 2em;
+	--em-xxl: 3em;
 
 	/* colors  */
 	--bg-clr: #23424a;
+	--bg-2-clr: #136c72;
 	--accent-clr: #38cfd9;
+	--accent-2-clr: #87629a;
 
 	--text-clr-light: #ffffff;
-	--text-clr-dark: #23424a;
+	--text-clr-dark: #3a3a3a;
 
 	/* other colors */
 	/* --clr-dark: ; */
@@ -118,21 +121,23 @@ header {
 	width: 70%;
 }
 
-h1 {
+.header__title {
 	font-size: var(--f-xxl);
 	margin-bottom: var(--rem-m);
+	line-height: 1.3;
 }
 
-p,
-button {
-	font-size: var(--f-m);
-}
-p {
+.header__p {
 	margin-bottom: var(--rem-l);
 }
+p,
+button {
+	font-size: var(--f-s);
+}
+
 button {
 	background: var(--accent-clr);
-	color: var(--text-clr-dark);
+	color: var(--bg-clr);
 	font-weight: bold;
 	padding: var(--em-s) var(--em-l);
 	border-radius: 30px;
@@ -143,4 +148,26 @@ button:hover,
 button:focus {
 	opacity: 0.75;
 	cursor: pointer;
+}
+
+/* flexbox challenge 1 */
+
+.flex {
+	display: flex;
+	gap: var(--em-l);
+	text-align: center;
+	padding: var(--em-xxl) 0;
+}
+
+.col h1 {
+	font-size: var(--f-xl);
+}
+
+.light--background h1 {
+	color: var(--accent-2-clr);
+}
+
+.dark--background {
+	background: var(--bg-2-clr);
+	color: var(--text-clr-light);
 }
