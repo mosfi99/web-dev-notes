@@ -23,9 +23,10 @@
 Instead use a dynamic + fixed system:
 
 ```css
-div {
+.container {
 	width: 80%;
 	max-width: 750px;
+	margin: 0 auto;
 }
 ```
 
