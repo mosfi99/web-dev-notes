@@ -30,7 +30,6 @@ video,
 canvas,
 svg {
 	display: block;
-	/* width: auto; */
 	max-width: 100%;
 }
 
