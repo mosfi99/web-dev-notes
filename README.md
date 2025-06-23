@@ -48,5 +48,61 @@ Instead use a dynamic + fixed system:
 
 ### Grid
 
-- `minmax`
+#### Construction of the grid
+
+```css
+.grid-parent {
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 100px 1fr;
+}
+/* Prefer fr, auto, or minmax over % for grid tracks */
+
+.sidebar-child {
+	grid-column: 1;
+	grid-row: 1 / 3;
+}
+```
+
+When there is a **fixed number** of rows and columns, areas give semantic meaning to the grid:
+
+```css
+.grid-parent {
+	grid-template-areas:
+		'sidebar header'
+		'sidebar main'
+		'sidebar footer';
+}
+
+.sidebar-child {
+	grid-area: sidebar;
+}
+.header-child {
+	grid-area: header;
+}
+.main-child {
+	grid-area: main;
+}
+.footer-child {
+	grid-area: footer;
+}
+```
+
+#### Responsive grid
+
 - `auto-fill`
+- `minmax`
+
+```css
+.grid-parent {
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+```
+
+#### Grid alignment
+
+- Horizontal or vertical alignment?
+
+  - Columns move horizontally: `justify-content`, `justify-items` & `justify-self`
+  - Rows move vertically: `align-content`, `align-items` & `align-self`
+
+Resource: [Interactive guide by Josh Comeau](https://www.joshwcomeau.com/css/interactive-guide-to-grid/#aligning-rows-10)
