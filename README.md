@@ -44,6 +44,26 @@ Instead use a dynamic + fixed system:
 
 ### Flex
 
+#### Flex alignment
+
+**`flex-direction: row`**
+
+| Property          | Axis       | Scope      | Purpose                        |
+| ----------------- | ---------- | ---------- | ------------------------------ |
+| `justify-content` | Horizontal | Container  | Distribute space between items |
+| `align-items`     | Vertical   | Container  | Align items vertically         |
+| `align-self`      | Vertical   | Individual | Override vertical alignment    |
+| `align-content`   | Vertical   | Container  | Align multiple lines (rows)    |
+
+**`flex-direction: column`**
+
+| Property          | Axis       | Scope      | Purpose                        |
+| ----------------- | ---------- | ---------- | ------------------------------ |
+| `justify-content` | Vertical   | Container  | Distribute space between items |
+| `align-items`     | Horizontal | Container  | Align items horizontally       |
+| `align-self`      | Horizontal | Individual | Override horizontal alignment  |
+| `align-content`   | Vertical   | Container  | Align multiple lines (columns) |
+
 - `flex-wrap`
 
 ### Grid
@@ -100,9 +120,13 @@ When there is a **fixed number** of rows and columns, areas give semantic meanin
 
 #### Grid alignment
 
-- Horizontal or vertical alignment?
-
-  - Columns move horizontally: `justify-content`, `justify-items` & `justify-self`
-  - Rows move vertically: `align-content`, `align-items` & `align-self`
+| Property          | Axis       | Scope      | Purpose                                  |
+| ----------------- | ---------- | ---------- | ---------------------------------------- |
+| `justify-content` | Horizontal | Container  | Align entire grid horizontally (columns) |
+| `justify-items`   | Horizontal | Items      | Align items within their columns         |
+| `justify-self`    | Horizontal | Individual | Override horizontal alignment per item   |
+| `align-content`   | Vertical   | Container  | Align entire grid vertically (rows)      |
+| `align-items`     | Vertical   | Items      | Align items within their rows            |
+| `align-self`      | Vertical   | Individual | Override vertical alignment per item     |
 
 Resource: [Interactive guide by Josh Comeau](https://www.joshwcomeau.com/css/interactive-guide-to-grid/#aligning-rows-10)
