@@ -1,8 +1,4 @@
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
-
+/* reset */
 *,
 *::before,
 *::after {
@@ -13,10 +9,8 @@
 	margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	html {
-		interpolate-size: allow-keywords;
-	}
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -40,6 +34,13 @@ select {
 	font: inherit;
 }
 
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
 p,
 h1,
 h2,
@@ -61,57 +62,68 @@ h5,
 h6 {
 	text-wrap: balance;
 }
-/* end of Josh's reset */
+/* end of reset */
 
-/* My CSS */
+/* variables */
 :root {
 	font-size: 16px;
 
-	/* font size */
-	--f-xs: 0.75rem; /* 12px */
-	--f-s: 0.875rem; /* 14px */
-	--f-base: 1rem; /* 16px */
-	--f-m: 1.125rem; /* 18px */
-	--f-l: 1.25rem; /* 20px */
-	--f-xl: 1.5rem; /* 24px */
-	--f-2xl: 2rem; /* 32px */
-	--f-3xl: 2.5rem; /* 40px */
+	/* responsive font sizes */
+	--f-s: clamp(0.95rem, 0.25vw + 0.85rem, 1rem);
+	--f-m: clamp(1.1rem, 0.3vw + 1rem, 1.125rem);
+	--f-l: clamp(1.25rem, 0.4vw + 1rem, 1.5rem);
 
 	/* line height */
 	--lh-tight: 1.2;
 	--lh-relaxed: 1.75;
 
 	/* spacing rem */
-	--rem-xs: 0.25rem; /* 4px */
-	--rem-s: 0.5rem; /* 8px */
-	--rem-m: 1rem; /* 16px */
-	--rem-l: 1.5rem; /* 24px */
-	--rem-xl: 2rem; /* 32px */
-	--rem-2xl: 3rem; /* 48px */
-	--rem-3xl: 4rem; /* 64px */
+	--rem-0-25: 0.25rem;
+	--rem-0-50: 0.5rem;
+	--rem-1: 1rem;
+	--rem-1-25: 1.25rem;
+	--rem-1-50: 1.5rem;
+	--rem-2: 2rem;
+	--rem-3: 3rem;
+	--rem-4: 4rem;
+	--rem-5: 5rem;
 
 	/* contextual spacing */
-	--em-xs: 0.25em;
-	--em-s: 0.5em;
-	--em-m: 1em;
-	--em-l: 1.5em;
-	--em-xl: 2em;
+	--em-0-25: 0.25em;
+	--em-0-5: 0.5em;
+	--em-1: 1em;
+	--em-1-50: 1.5em;
+	--em-2: 2em;
 
 	/* colors  */
-	--bg-clr: ;
-	--accent-clr: ;
+	--bg-clr-dark: #191a20;
+	--bg-clr-light: #d8d8d8;
+	--border-clr: #3367a3;
+	--hover-clr: #3367a377;
 
-	--text-clr-light: ;
-	--text-clr-dark: ;
+	--text-clr-light: #d8d8d8;
+	--text-clr-dark: #191a20;
 
 	/* UI validation */
-	--success-clr: ;
-	--warning-clr: ;
-	--error-clr: ;
+	--success-clr: #0fc975;
+	--focus-clr: #fff697;
+	--error-clr: #ff897e;
 
 	/* shadows */
-	--shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
-	--shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+	--shadow: 0 0 var(--rem-1);
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	background-color: var(--bg-clr-light);
+	color: var(--text-clr-dark);
+	min-height: 100vh;
+}
+
+/* a11y */
+:focus-visible {
+	outline: 2px solid var(--focus-clr);
+	outline-offset: 2px;
 }
 
 /* utilities */
